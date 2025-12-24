@@ -1,0 +1,16 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "progress",
+  "description": "Capability for progress windows",
+  "windows": [
+    "progress-*"
+  ],
+  "permissions": [
+    "core:default",
+    "core:event:allow-listen",
+    "core:window:allow-start-dragging",
+    "core:window:allow-minimize",
+    "core:window:allow-maximize",
+    "core:window:allow-close"
+  ]
+}

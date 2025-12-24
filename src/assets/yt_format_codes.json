@@ -1,0 +1,611 @@
+{
+  "dash_video": {
+    "description": "DASH video streams (video only, no audio)",
+    "notes": [
+      "HFR (High Framerate) supports up to 60 FPS",
+      "Non-HFR limited to 30 FPS",
+      "AV1 variants only available on popular videos",
+      "Formats in parentheses are deprecated or rare"
+    ],
+    "formats": {
+      "4320p_8k": {
+        "av1_hfr_high": [
+          702
+        ],
+        "av1_hfr": [
+          402,
+          571
+        ],
+        "vp9_hfr": [
+          272
+        ]
+      },
+      "2160p_4k": {
+        "av1_hfr_high": [
+          701
+        ],
+        "av1_hfr": [
+          401
+        ],
+        "vp9.2_hdr_hfr": [
+          337
+        ],
+        "vp9_hfr": [
+          315
+        ],
+        "vp9": [
+          313
+        ]
+      },
+      "1440p_2k": {
+        "av1_hfr_high": [
+          700
+        ],
+        "av1_hfr": [
+          400
+        ],
+        "vp9.2_hdr_hfr": [
+          336
+        ],
+        "vp9_hfr": [
+          308
+        ],
+        "vp9": [
+          271
+        ]
+      },
+      "1080p": {
+        "av1_hfr_high": [
+          699
+        ],
+        "av1_hfr": [
+          399,
+          721
+        ],
+        "vp9.2_hdr_hfr": [
+          335
+        ],
+        "vp9_hfr": [
+          303
+        ],
+        "vp9": [
+          248,
+          356
+        ],
+        "h264_hfr": [
+          299
+        ],
+        "h264": [
+          137
+        ],
+        "vp8": [
+          170
+        ]
+      },
+      "720p": {
+        "av1_hfr_high": [
+          698
+        ],
+        "av1_hfr": [
+          398
+        ],
+        "vp9.2_hdr_hfr": [
+          334
+        ],
+        "vp9_hfr": [
+          302,
+          612
+        ],
+        "vp9": [
+          247
+        ],
+        "h264_hfr": [
+          298
+        ],
+        "h264": [
+          136,
+          214
+        ],
+        "vp8": [
+          169
+        ]
+      },
+      "480p": {
+        "av1_hfr_high": [
+          697
+        ],
+        "av1": [
+          397
+        ],
+        "vp9.2_hdr_hfr": [
+          333
+        ],
+        "vp9": [
+          244
+        ],
+        "h264": [
+          135
+        ],
+        "vp8": [
+          168
+        ]
+      },
+      "360p": {
+        "av1_hfr_high": [
+          696
+        ],
+        "av1": [
+          396
+        ],
+        "vp9.2_hdr_hfr": [
+          332
+        ],
+        "vp9": [
+          243
+        ],
+        "h264": [
+          134
+        ],
+        "vp8": [
+          167
+        ]
+      },
+      "240p": {
+        "av1_hfr_high": [
+          695
+        ],
+        "av1": [
+          395
+        ],
+        "vp9.2_hdr_hfr": [
+          331
+        ],
+        "vp9": [
+          242
+        ],
+        "h264": [
+          133
+        ]
+      },
+      "144p": {
+        "av1_hfr_high": [
+          694
+        ],
+        "av1": [
+          394
+        ],
+        "vp9.2_hdr_hfr": [
+          330
+        ],
+        "vp9": [
+          278,
+          598
+        ],
+        "h264": [
+          160,
+          597
+        ]
+      }
+    },
+    "special_formats": {
+      "608p_rare": {
+        "description": "Rare 1080x608 resolution formats",
+        "formats": [
+          {
+            "code": 779,
+            "codec": "VP9",
+            "container": "WebM",
+            "note": "Efficiency for mobile"
+          },
+          {
+            "code": 780,
+            "codec": "VP9",
+            "container": "WebM",
+            "note": "Best VP9 quality"
+          },
+          {
+            "code": 788,
+            "codec": "AV1",
+            "container": "MP4",
+            "note": "Some videos only"
+          }
+        ]
+      },
+      "72p_rare": {
+        "code": 228,
+        "codec": "AVC",
+        "container": "MP4",
+        "fps": 6,
+        "note": "Thumbnail quality with slow FPS"
+      }
+    },
+    "premium_formats": {
+      "description": "Require YouTube Premium subscription",
+      "formats": [
+        {
+          "code": 356,
+          "resolution": "1080p",
+          "codec": "VP9",
+          "note": "Premium only"
+        },
+        {
+          "code": 616,
+          "resolution": "1080p",
+          "codec": "VP9",
+          "protocol": "m3u8",
+          "note": "Premium only, linked to 356"
+        },
+        {
+          "code": 721,
+          "resolution": "1080p",
+          "codec": "AV1 HFR",
+          "note": "Premium only, requires cookies"
+        }
+      ]
+    }
+  },
+  "dash_audio": {
+    "description": "DASH audio streams (audio only, no video)",
+    "notes": [
+      "DRC = Dynamic Range Compression",
+      "VBR = Variable Bit Rate",
+      "YouTube Music formats marked as 'YT Music'"
+    ],
+    "formats": [
+      {
+        "code": 139,
+        "container": "MP4",
+        "codec": "AAC (HE v1)",
+        "bitrate": "48 Kbps",
+        "channels": "Stereo (2)",
+        "status": "Yes",
+        "notes": "YT Music, DRC optional"
+      },
+      {
+        "code": 140,
+        "container": "MP4",
+        "codec": "AAC (LC)",
+        "bitrate": "128 Kbps",
+        "channels": "Stereo (2)",
+        "status": "Yes",
+        "notes": "YT Music, DRC optional"
+      },
+      {
+        "code": 141,
+        "container": "MP4",
+        "codec": "AAC (LC)",
+        "bitrate": "256 Kbps",
+        "channels": "Stereo (2)",
+        "status": "No",
+        "notes": "YT Music Premium only"
+      },
+      {
+        "code": 249,
+        "container": "WebM",
+        "codec": "Opus",
+        "bitrate": "~50 Kbps (VBR)",
+        "channels": "Stereo (2)",
+        "status": "Some",
+        "notes": "DRC optional"
+      },
+      {
+        "code": 250,
+        "container": "WebM",
+        "codec": "Opus",
+        "bitrate": "~70 Kbps (VBR)",
+        "channels": "Stereo (2)",
+        "status": "Some",
+        "notes": "DRC optional"
+      },
+      {
+        "code": 251,
+        "container": "WebM",
+        "codec": "Opus",
+        "bitrate": "~128 Kbps (VBR)",
+        "channels": "Stereo (2)",
+        "status": "Yes",
+        "notes": "DRC optional, RECOMMENDED"
+      },
+      {
+        "code": 256,
+        "container": "MP4",
+        "codec": "AAC (HE v1)",
+        "bitrate": "192 Kbps",
+        "channels": "Surround (5.1)",
+        "status": "Rarely",
+        "notes": "Surround audio"
+      },
+      {
+        "code": 258,
+        "container": "MP4",
+        "codec": "AAC (LC)",
+        "bitrate": "384 Kbps",
+        "channels": "Surround (5.1)",
+        "status": "Rarely",
+        "notes": "Surround audio"
+      },
+      {
+        "code": 325,
+        "container": "MP4",
+        "codec": "DTSE (DTS Express)",
+        "bitrate": "384 Kbps",
+        "channels": "Surround (5.1)",
+        "status": "Rarely",
+        "notes": "Surround audio"
+      },
+      {
+        "code": 327,
+        "container": "MP4",
+        "codec": "AAC (LC)",
+        "bitrate": "256 Kbps",
+        "channels": "Surround (5.1)",
+        "status": "Unknown",
+        "notes": "Surround audio, rare"
+      },
+      {
+        "code": 328,
+        "container": "MP4",
+        "codec": "EAC3",
+        "bitrate": "384 Kbps",
+        "channels": "Surround (5.1)",
+        "status": "Rarely",
+        "notes": "Surround audio"
+      },
+      {
+        "code": 338,
+        "container": "WebM",
+        "codec": "Opus",
+        "bitrate": "~480 Kbps (VBR)",
+        "channels": "Ambisonic (4)",
+        "status": "Unknown",
+        "notes": "360° spatial audio"
+      },
+      {
+        "code": 380,
+        "container": "MP4",
+        "codec": "AC3",
+        "bitrate": "384 Kbps",
+        "channels": "Surround (5.1)",
+        "status": "Rarely",
+        "notes": "Surround audio"
+      },
+      {
+        "code": 599,
+        "container": "MP4",
+        "codec": "AAC (HE v1)",
+        "bitrate": "30 Kbps",
+        "channels": "Stereo (2)",
+        "status": "Discontinued Feb 2025",
+        "notes": "DRC optional"
+      },
+      {
+        "code": 600,
+        "container": "WebM",
+        "codec": "Opus",
+        "bitrate": "~35 Kbps (VBR)",
+        "channels": "Stereo (2)",
+        "status": "Discontinued Feb 2025",
+        "notes": "DRC optional"
+      },
+      {
+        "code": 773,
+        "container": "MP4",
+        "codec": "IAMF (Opus)",
+        "bitrate": "~900 Kbps (VBR)",
+        "channels": "Binaural (7.1.4)",
+        "status": "Rarely",
+        "notes": "3D audio, up to 18 channels"
+      },
+      {
+        "code": 774,
+        "container": "WebM",
+        "codec": "Opus",
+        "bitrate": "~256 Kbps (VBR)",
+        "channels": "Stereo (2)",
+        "status": "Some",
+        "notes": "YT Music Premium, high quality"
+      }
+    ]
+  },
+  "legacy_formats": {
+    "description": "Non-DASH formats (video + audio combined)",
+    "notes": [
+      "Most formats discontinued",
+      "Limited to 30 FPS",
+      "Format 18 still used for Google Drive previews"
+    ],
+    "formats": [
+      {
+        "code": 5,
+        "container": "FLV",
+        "video": "H.263 240p (4:3)",
+        "audio": "MP3 64 Kbps Mono",
+        "status": "Discontinued"
+      },
+      {
+        "code": 6,
+        "container": "FLV",
+        "video": "H.263 270p (4:3)",
+        "audio": "MP3 64 Kbps Mono",
+        "status": "Discontinued"
+      },
+      {
+        "code": 13,
+        "container": "3GP",
+        "video": "MPEG-4 144p",
+        "audio": "AAC (LC) Mono",
+        "status": "Discontinued"
+      },
+      {
+        "code": 17,
+        "container": "3GP",
+        "video": "MPEG-4 144p",
+        "audio": "AAC (LC) 24 Kbps Mono",
+        "status": "Discontinued May 2024",
+        "notes": "Old mobile phones"
+      },
+      {
+        "code": 18,
+        "container": "MP4",
+        "video": "H.264 360p",
+        "audio": "AAC (LC) 96-128 Kbps Stereo",
+        "status": "Yes",
+        "notes": "Google Drive, most common combined format"
+      },
+      {
+        "code": 22,
+        "container": "MP4",
+        "video": "H.264 720p",
+        "audio": "AAC (LC) 128 Kbps Stereo",
+        "status": "Discontinued June 21, 2024",
+        "notes": "Google Drive"
+      },
+      {
+        "code": 34,
+        "container": "FLV",
+        "video": "H.264 360p",
+        "audio": "AAC 128 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 35,
+        "container": "FLV",
+        "video": "H.264 480p",
+        "audio": "AAC 128 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 36,
+        "container": "3GP",
+        "video": "MPEG-4 144p",
+        "audio": "AAC (LC) 24 Kbps Mono",
+        "status": "Rarely",
+        "notes": "Old mobile phones"
+      },
+      {
+        "code": 37,
+        "container": "MP4",
+        "video": "H.264 1080p",
+        "audio": "AAC (LC) 128 Kbps Stereo",
+        "status": "Discontinued",
+        "notes": "Google Drive"
+      },
+      {
+        "code": 38,
+        "container": "MP4",
+        "video": "H.264 3072p",
+        "audio": "AAC 192 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 43,
+        "container": "WebM",
+        "video": "VP8 360p",
+        "audio": "Vorbis 128 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 44,
+        "container": "WebM",
+        "video": "VP8 480p",
+        "audio": "Vorbis 128 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 45,
+        "container": "WebM",
+        "video": "VP8 720p",
+        "audio": "Vorbis 192 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 46,
+        "container": "WebM",
+        "video": "VP8 1080p",
+        "audio": "Vorbis 192 Kbps Stereo",
+        "status": "Discontinued"
+      },
+      {
+        "code": 59,
+        "container": "MP4",
+        "video": "H.264 480p",
+        "audio": "AAC (LC) 128 Kbps Stereo",
+        "status": "Discontinued",
+        "notes": "Google Drive"
+      },
+      {
+        "code": 78,
+        "container": "MP4",
+        "video": "H.264 480p",
+        "audio": "AAC 128 Kbps Stereo",
+        "status": "Discontinued"
+      }
+    ]
+  },
+  "livestream_formats": {
+    "description": "HLS livestream formats (MPEG-TS)",
+    "notes": [
+      "Non-HFR limited to 30 FPS",
+      "HFR supports up to 60 FPS",
+      "Audio limited to 44.1 kHz sample rate"
+    ],
+    "formats": [
+      {
+        "code": 91,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 144p",
+        "audio": "AAC (HE v1) 48 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 92,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 240p",
+        "audio": "AAC (HE v1) 48 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 93,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 360p",
+        "audio": "AAC (LC) 128 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 94,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 480p",
+        "audio": "AAC (LC) 128 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 95,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 720p",
+        "audio": "AAC (LC) 128 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 96,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 1080p",
+        "audio": "AAC (LC) 128 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 300,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 720p HFR (60fps)",
+        "audio": "AAC (LC) 128 Kbps",
+        "status": "Yes"
+      },
+      {
+        "code": 301,
+        "container": "MPEG-TS (HLS)",
+        "video": "H.264 1080p HFR (60fps)",
+        "audio": "AAC (LC) 128 Kbps",
+        "status": "Yes"
+      }
+    ]
+  }
+}
